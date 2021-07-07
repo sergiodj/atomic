@@ -69,7 +69,7 @@ func TestUintptr(t *testing.T) {
 	t.Run("String", func(t *testing.T) {
 		// Use an integer with the signed bit set. If we're converting
 		// incorrectly, we'll get a negative value here.
-		atom := NewUintptr(uintptr(math.MaxUint64))
+		atom := NewUintptr(uintptr(uint64(math.MaxUint64)))
 		assert.Equal(t, "18446744073709551615", atom.String(),
 			"String() returned an unexpected value.")
 	})
